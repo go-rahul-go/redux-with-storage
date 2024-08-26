@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+
+  .html,
+  body {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(22, 22, 22);
+  }
+
+  .tick-box {
+    width: 30px;
+    height: 30px;
+    background-color: ghostwhite;
+    border-radius: 50%;
+  }
+
+  .tick-box-checked {
+    background-color: rgb(139, 205, 255);
+  }
+
+  .strike-line {
+    text-decoration: line-through;
+    font-size: 1.2rem;
+    color: rgb(98, 100, 100);
+    font-weight: 500;
+
+  }
+
+  .task-title {
+    font-size: 1.2rem;
+    color: ghostwhite;
+    font-weight: 500;
+
+  }
+
+  .task-input:focus {
+    outline: 2px solid rgb(0, 149, 255);
+    outline-offset: 4px;
+  }
+
+ 
+  .task-display {
+    position: relative;
+    z-index: 2;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+  }
+
+  .task-display:nth-child(even) {
+    background-color: #353637cc;
+  }
+
+  .task-display:nth-child(odd) {
+    background-color: #444444bd;
+  }
+
+  .delete-btn {
+    padding-inline: 7px;
+    padding-block: 6px;
+    text-transform: capitalize;
+    border: 2px solid #F42B03;
+    color: #F42B03;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 100ms ease-in;
+  }
+
+  .delete-btn:hover {
+    background-color: #F42B03;
+    color: ghostwhite
+  }
+
+  .left-arrow {
+    transform: rotate(-45deg);
+  }
+
+  .right-arrow {
+    transform: rotate(45deg);
+  }
+
+  .task-logo {
+    position: fixed;
+    bottom: 10vh;
+    right: 10vw;
+    width: 80vw;
+    height: 60vh;
+    /* border:2px solid red; */
+    z-index: 1;
+    /* animation: marie-go-round 25000ms linear infinite; */
+  }
+
+  @keyframes marie-go-round {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+
+  }
+}
